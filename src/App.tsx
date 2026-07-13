@@ -9,8 +9,9 @@ function App() {
     guests: '1',
     notes: ''
   });
-
+  
   const [submitted, setSubmitted] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -50,6 +51,11 @@ function App() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
+    setMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
@@ -75,6 +81,87 @@ function App() {
               Join The Party ★
             </button>
           </nav>
+
+          {/* Mobile Hamburger Menu Button */}
+          <button
+            className="hamburger-menu"
+            onClick={toggleMobileMenu}
+            style={{
+              display: 'none',
+              flexDirection: 'column',
+              justifyContent: 'space-around',
+              width: '30px',
+              height: '25px',
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 0,
+              zIndex: 1001,
+            }}
+            aria-label="Toggle menu"
+          >
+            <span
+              style={{
+                width: '30px',
+                height: '3px',
+                background: 'var(--gold)',
+                borderRadius: '2px',
+                transition: 'all 0.3s ease',
+                transform: mobileMenuOpen ? 'rotate(45deg) translate(8px, 8px)' : 'none',
+              }}
+            ></span>
+            <span
+              style={{
+                width: '30px',
+                height: '3px',
+                background: 'var(--gold)',
+                borderRadius: '2px',
+                transition: 'all 0.3s ease',
+                opacity: mobileMenuOpen ? 0 : 1,
+              }}
+            ></span>
+            <span
+              style={{
+                width: '30px',
+                height: '3px',
+                background: 'var(--gold)',
+                borderRadius: '2px',
+                transition: 'all 0.3s ease',
+                transform: mobileMenuOpen ? 'rotate(-45deg) translate(8px, -8px)' : 'none',
+              }}
+            ></span>
+          </button>
+
+          {/* Mobile Menu Overlay */}
+          {mobileMenuOpen && (
+            <div
+              style={{
+                position: 'fixed',
+                top: '60px',
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'rgba(3, 8, 18, 0.98)',
+                backdropFilter: 'blur(10px)',
+                zIndex: 999,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '30px',
+              }}
+            >
+              <span className="nav-link" onClick={() => scrollToSection('home')} style={{ fontSize: '18px' }}>Home</span>
+              <span className="nav-link" onClick={() => scrollToSection('about')} style={{ fontSize: '18px' }}>About PK</span>
+              <span className="nav-link" onClick={() => scrollToSection('journey')} style={{ fontSize: '18px' }}>Life Journey</span>
+              <span className="nav-link" onClick={() => scrollToSection('entrepreneurship')} style={{ fontSize: '18px' }}>Entrepreneurship</span>
+              <span className="nav-link" onClick={() => scrollToSection('friendship')} style={{ fontSize: '18px' }}>Friendship</span>
+              <span className="nav-link" onClick={() => scrollToSection('celebration')} style={{ fontSize: '18px' }}>Celebration</span>
+              <button className="btn-join" onClick={() => scrollToSection('rsvp')} style={{ marginTop: '20px' }}>
+                Join The Party ★
+              </button>
+            </div>
+          )}
         </div>
       </header>
 
@@ -353,6 +440,10 @@ function App() {
                   src="/assets/pk_video.mp4"
                   poster="/assets/thumbnail.png"
                   controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="swag-video"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '350px' }}
                 >

@@ -1256,7 +1256,7 @@ textarea.form-input-overlay {
   }
 }
 
-/* Mobile Navigation - Horizontal Scroll */
+/* Mobile Navigation - Hamburger Menu */
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 15px;
@@ -1268,32 +1268,25 @@ textarea.form-input-overlay {
   }
 
   .desktop-menu-wrapper {
-    gap: 15px !important;
+    display: none !important;
   }
 
-  .nav-menu {
-    gap: 15px !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 5px 0;
+  .hamburger-menu {
+    display: flex !important;
   }
+}
 
-  .nav-menu::-webkit-scrollbar {
-    display: none;
-  }
+/* Hamburger Menu Button */
+.hamburger-menu {
+  display: none;
+}
 
-  .nav-link {
-    font-size: 11px !important;
-    letter-spacing: 0.8px !important;
-    white-space: nowrap;
-  }
-
-  .btn-join {
-    padding: 8px 16px !important;
-    font-size: 11px !important;
-    letter-spacing: 1px !important;
+/* Footer Responsive */
+@media (max-width: 768px) {
+  footer img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
