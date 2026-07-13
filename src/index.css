@@ -3,8 +3,8 @@
   --bg-secondary: #0a1128;
   --bg-tertiary: #0c153a;
 
-  --gold-light: #f5e3a9;
-  --gold: #d4af37;
+  --gold-light: #e21111;
+  --gold: #b43717;
   --gold-dark: #aa7c11;
   --gold-darker: #7e5a00;
 
@@ -80,7 +80,7 @@ h6 {
 }
 
 .serif-title {
-  font-family: var(--font-serif);
+  /* font-family: var(--font-serif); */
   font-style: italic;
 }
 
@@ -415,7 +415,7 @@ h6 {
 }
 
 .section-tag {
-  color: var(--gold);
+  color: var(--orange);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -440,7 +440,7 @@ h6 {
 .section-heading {
   font-size: 32px;
   margin-bottom: 20px;
-  font-family: var(--font-serif);
+  /* font-family: var(--font-serif); */
   font-weight: 700;
   background: linear-gradient(135deg, var(--text-dark) 0%, var(--bg-primary) 100%);
   -webkit-background-clip: text;
@@ -834,7 +834,7 @@ h6 {
   background-position: center;
 }
 
-.rsvp-left-overlay {
+/* .rsvp-left-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -842,7 +842,7 @@ h6 {
   height: 100%;
   background: linear-gradient(135deg, rgba(253, 252, 247, 0.9) 0%, rgba(245, 242, 235, 0.95) 100%);
   z-index: 1;
-}
+} */
 
 .rsvp-left-content {
   position: relative;
@@ -864,7 +864,7 @@ h6 {
 }
 
 .rsvp-title {
-  font-family: var(--font-serif);
+  /* font-family: var(--font-serif); */
   font-size: 32px;
   font-style: italic;
   margin-bottom: 10px;
