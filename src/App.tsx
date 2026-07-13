@@ -60,21 +60,6 @@ function App() {
 
   return (
     <>
-      {/* Mobile Menu Blur Overlay - positioned behind menu but over content */}
-      {mobileMenuOpen && (
-        <div style={{
-          position: 'fixed',
-          top: '60px',
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(3, 8, 18, 0.75)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          zIndex: 998,
-        }}></div>
-      )}
-
       {/* Navigation Header */}
       <header className="header">
         <div className="nav-container">
@@ -157,8 +142,10 @@ function App() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'rgba(3, 8, 18, 0.95)',
-                zIndex: 998,
+                background: 'rgba(3, 8, 18, 0.85)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                zIndex: 999,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
