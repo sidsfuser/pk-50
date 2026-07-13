@@ -232,9 +232,9 @@ function App() {
       </div>
 
       {/* Life Journey Section */}
-      <section id="journey" className="section" style={{ background: '#FAF8F5', padding: '80px 0' }}>
+      <section id="journey" className="section" style={{ background: '#eee5db', padding: '80px 0' }}>
         <div className="container">
-          <div className="journey-grid">
+          <div className="journey-grid" style={{ background: '#eee5db' }}>
             {/* Childhood Column */}
             <div className="journey-col-childhood">
               <div className="journey-content-wrapper">
@@ -256,10 +256,8 @@ function App() {
                     </p>
                   </div>
                   
-                  <div className="journey-visual" style={{ flex: '0 0 55%' }}>
-                    <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: '8px', overflow: 'hidden', background: '#1a202c' }}>
-                      <img src="/assets/childhood.png" alt="Childhood photo collage" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
-                    </div>
+                  <div className="journey-visual" style={{ flex: '0 0 55%', display: 'flex', justifyContent: 'center' }}>
+                    <img src="/assets/childhood.png" alt="Childhood photo collage" style={{ width: '100%', display: 'block', objectFit: 'contain', maxHeight: '350px' }} />
                   </div>
                 </div>
               </div>
@@ -286,10 +284,8 @@ function App() {
                     </p>
                   </div>
                   
-                  <div className="journey-visual" style={{ flex: '0 0 55%' }}>
-                    <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: '8px', overflow: 'hidden', background: '#1a202c' }}>
-                      <img src="/assets/family.png" alt="Prabhu Karunakaran Family" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
-                    </div>
+                  <div className="journey-visual" style={{ flex: '0 0 55%', display: 'flex', justifyContent: 'center' }}>
+                    <img src="/assets/family.png" alt="Prabhu Karunakaran Family" style={{ width: '100%', display: 'block', objectFit: 'contain', maxHeight: '350px' }} />
                   </div>
                 </div>
               </div>
