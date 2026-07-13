@@ -258,7 +258,7 @@ function App() {
                   
                   <div className="journey-visual" style={{ flex: '0 0 55%' }}>
                     <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: '8px', overflow: 'hidden', background: '#1a202c' }}>
-                      <img src="/assets/childhood_full_block.png" alt="Childhood photo collage" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+                      <img src="/assets/childhood.png" alt="Childhood photo collage" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
                     </div>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ function App() {
                   
                   <div className="journey-visual" style={{ flex: '0 0 55%' }}>
                     <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: '8px', overflow: 'hidden', background: '#1a202c' }}>
-                      <img src="/assets/family_photo.png" alt="Prabhu Karunakaran Family" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+                      <img src="/assets/family.png" alt="Prabhu Karunakaran Family" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
                     </div>
                   </div>
                 </div>
