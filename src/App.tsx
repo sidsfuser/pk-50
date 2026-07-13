@@ -55,12 +55,53 @@ function App() {
   };
 
   const toggleMobileMenu = () => {
-    console.log('Toggling mobile menu, current state:', !mobileMenuOpen);
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
     <>
+      {/* Mobile Blur Overlay - only on mobile */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(3, 8, 18, 0.85)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          zIndex: 997,
+        }} />
+      )}
+
+      {/* Mobile Menu Overlay - only on mobile */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'fixed',
+          top: '60px',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 999,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '25px',
+        }}>
+          <span className="nav-link" onClick={() => scrollToSection('home')} style={{ fontSize: '18px', padding: '10px 0' }}>Home</span>
+          <span className="nav-link" onClick={() => scrollToSection('about')} style={{ fontSize: '18px', padding: '10px 0' }}>About PK</span>
+          <span className="nav-link" onClick={() => scrollToSection('journey')} style={{ fontSize: '18px', padding: '10px 0' }}>Life Journey</span>
+          <span className="nav-link" onClick={() => scrollToSection('entrepreneurship')} style={{ fontSize: '18px', padding: '10px 0' }}>Entrepreneurship</span>
+          <span className="nav-link" onClick={() => scrollToSection('friendship')} style={{ fontSize: '18px', padding: '10px 0' }}>Friendship</span>
+          <span className="nav-link" onClick={() => scrollToSection('celebration')} style={{ fontSize: '18px', padding: '10px 0' }}>Celebration</span>
+          <button className="btn-join" onClick={() => scrollToSection('rsvp')} style={{ marginTop: '15px' }}>
+            Join The Party ★
+          </button>
+        </div>
+      )}
+
       {/* Navigation Header */}
       <header className="header">
         <div className="nav-container">
@@ -132,40 +173,6 @@ function App() {
               }}
             ></span>
           </button>
-
-          {/* Mobile Menu Overlay */}
-          {mobileMenuOpen && (
-            <div
-              className="mobile-menu-overlay"
-              style={{
-                position: 'fixed',
-                top: '60px',
-                left: '0',
-                right: '0',
-                bottom: '0',
-                background: 'rgba(3, 8, 18, 0.85)',
-                backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
-                zIndex: 999,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '30px',
-                padding: '20px',
-              }}
-            >
-              <span className="nav-link" onClick={() => scrollToSection('home')} style={{ fontSize: '18px' }}>Home</span>
-              <span className="nav-link" onClick={() => scrollToSection('about')} style={{ fontSize: '18px' }}>About PK</span>
-              <span className="nav-link" onClick={() => scrollToSection('journey')} style={{ fontSize: '18px' }}>Life Journey</span>
-              <span className="nav-link" onClick={() => scrollToSection('entrepreneurship')} style={{ fontSize: '18px' }}>Entrepreneurship</span>
-              <span className="nav-link" onClick={() => scrollToSection('friendship')} style={{ fontSize: '18px' }}>Friendship</span>
-              <span className="nav-link" onClick={() => scrollToSection('celebration')} style={{ fontSize: '18px' }}>Celebration</span>
-              <button className="btn-join" onClick={() => scrollToSection('rsvp')} style={{ marginTop: '20px' }}>
-                Join The Party ★
-              </button>
-            </div>
-          )}
         </div>
       </header>
 
