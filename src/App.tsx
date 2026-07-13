@@ -85,35 +85,137 @@ function App() {
       <section 
         id="home" 
         className="hero" 
-        style={{ backgroundImage: 'url("/assets/hero.png")' }}
+        style={{ backgroundImage: 'url("/assets/hero.png")', position: 'relative' }}
       >
-        <div className="container" style={{ position: 'relative', height: '100%', width: '100%' }}>
-          <button 
-            className="hero-rsvp-btn glow-btn" 
-            onClick={() => scrollToSection('rsvp')}
-          >
-            RSVP Now ★
-          </button>
-
-          {/* Clickable Quick Nav Hotspots on the bottom gold bar */}
-          <div className="quick-nav-hotspots" style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            width: '100%',
-            height: '18%',
-            display: 'flex',
-            zIndex: 5
+        {/* Right-aligned text content overlay to match the mockup exactly */}
+        <div className="hero-text-overlay-col" style={{
+          position: 'absolute',
+          top: '23%',
+          right: '5%',
+          width: '45%',
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          zIndex: 3,
+          pointerEvents: 'none'
+        }}>
+          {/* PK-50 Title */}
+          <h1 style={{
+            fontSize: '7vw',
+            fontWeight: '900',
+            color: '#b81d24',
+            margin: '0 0 5px 0',
+            fontFamily: 'Outfit, sans-serif',
+            letterSpacing: '1px',
+            lineHeight: '1',
+            textShadow: '1px 1px 2px rgba(255,255,255,0.6)'
           }}>
-            <div style={{ flex: '0.41' }}></div> {/* Spacer for logo/left side */}
-            <div style={{ display: 'flex', flex: '0.59', width: '100%', height: '100%' }}>
-              <a onClick={() => scrollToSection('journey')} style={{ flex: 1, cursor: 'pointer' }} title="Childhood"></a>
-              <a onClick={() => scrollToSection('journey')} style={{ flex: 1, cursor: 'pointer' }} title="Family"></a>
-              <a onClick={() => scrollToSection('entrepreneurship')} style={{ flex: 1, cursor: 'pointer' }} title="Entrepreneurship"></a>
-              <a onClick={() => scrollToSection('friendship')} style={{ flex: 1, cursor: 'pointer' }} title="Friendship"></a>
-              <a onClick={() => scrollToSection('celebration')} style={{ flex: 1, cursor: 'pointer' }} title="Cars & Rolex"></a>
-              <a onClick={() => scrollToSection('rsvp')} style={{ flex: 1.2, cursor: 'pointer' }} title="Join The Party"></a>
-            </div>
+            PK-50
+          </h1>
+          
+          {/* LOADED. TIMELESS. UNSTOPPABLE. banner */}
+          <div style={{
+            borderTop: '2px solid #0e1626',
+            borderBottom: '2px solid #0e1626',
+            padding: '4px 10px',
+            margin: '2px 0 6px 0',
+            display: 'inline-block'
+          }}>
+            <p style={{
+              fontSize: '1vw',
+              color: '#0e1626',
+              letterSpacing: '3px',
+              fontWeight: '700',
+              margin: '0',
+              textTransform: 'uppercase',
+              fontFamily: 'Montserrat, sans-serif'
+            }}>
+              LOADED. TIMELESS. UNSTOPPABLE.
+            </p>
+          </div>
+          
+          {/* Little Red Star */}
+          <div style={{ color: '#b81d24', fontSize: '1.2vw', margin: '2px 0' }}>★</div>
+          
+          {/* PRABHU KARUNAKARAN */}
+          <h2 style={{
+            fontSize: '2.8vw',
+            fontWeight: '800',
+            color: '#b81d24',
+            margin: '2px 0',
+            fontFamily: 'Outfit, sans-serif',
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            textShadow: '1px 1px 1px rgba(255,255,255,0.5)'
+          }}>
+            Prabhu Karunakaran
+          </h2>
+          
+          {/* TURNING 50 ON APRIL 3, 2027 */}
+          <p style={{
+            fontSize: '1.1vw',
+            color: '#0e1626',
+            fontWeight: '700',
+            margin: '2px 0',
+            textTransform: 'uppercase',
+            fontFamily: 'Montserrat, sans-serif',
+            letterSpacing: '1px'
+          }}>
+            Turning 50 on April 3, 2027
+          </p>
+          
+          {/* DALLAS, TEXAS banner */}
+          <p style={{
+            fontSize: '1.2vw',
+            color: '#0e1626',
+            fontWeight: '700',
+            margin: '2px 0 10px 0',
+            textTransform: 'uppercase',
+            fontFamily: 'Montserrat, sans-serif',
+            letterSpacing: '2px'
+          }}>
+            <span style={{ color: '#b81d24', marginRight: '5px' }}>★</span> Dallas, Texas <span style={{ color: '#b81d24', marginLeft: '5px' }}>★</span>
+          </p>
+          
+          {/* Join the Celebration */}
+          <p style={{
+            fontSize: '3.2vw',
+            color: '#1a365d',
+            fontFamily: 'Alex Brush, cursive',
+            margin: '0',
+            lineHeight: '1'
+          }}>
+            Join the Celebration
+          </p>
+        </div>
+
+        {/* Transparent RSVP Button Overlay over the pre-rendered gold button */}
+        <button 
+          className="hero-rsvp-btn glow-btn" 
+          onClick={() => scrollToSection('rsvp')}
+        >
+          RSVP Now ★
+        </button>
+
+        {/* Clickable Quick Nav Hotspots on the bottom gold bar */}
+        <div className="quick-nav-hotspots" style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: '14%',
+          display: 'flex',
+          zIndex: 5
+        }}>
+          <div style={{ flex: '0.413' }}></div> {/* Spacer for logo/left side */}
+          <div style={{ display: 'flex', flex: '0.587', width: '100%', height: '100%' }}>
+            <a onClick={() => scrollToSection('journey')} style={{ flex: 1, cursor: 'pointer' }} title="Childhood"></a>
+            <a onClick={() => scrollToSection('journey')} style={{ flex: 1, cursor: 'pointer' }} title="Family"></a>
+            <a onClick={() => scrollToSection('entrepreneurship')} style={{ flex: 1, cursor: 'pointer' }} title="Entrepreneurship"></a>
+            <a onClick={() => scrollToSection('friendship')} style={{ flex: 1, cursor: 'pointer' }} title="Friendship"></a>
+            <a onClick={() => scrollToSection('celebration')} style={{ flex: 1, cursor: 'pointer' }} title="Cars & Rolex"></a>
+            <a onClick={() => scrollToSection('rsvp')} style={{ flex: 1.2, cursor: 'pointer' }} title="Join The Party"></a>
           </div>
         </div>
       </section>
@@ -125,25 +227,27 @@ function App() {
             {/* Childhood Column */}
             <div className="journey-col-childhood">
               <div className="journey-content-wrapper">
-                <div>
-                  <span className="section-tag" style={{ color: 'var(--accent-red)' }}>1977 - 1995</span>
-                  <h3 className="section-heading" style={{ fontSize: '24px', marginBottom: '15px', color: 'var(--bg-primary)' }}>Childhood</h3>
+                <div style={{ marginBottom: '25px' }}>
+                  <span className="section-tag" style={{ color: 'var(--accent-red)', fontSize: '11px', letterSpacing: '2px' }}>1977 - 1995</span>
+                  <h3 className="section-heading" style={{ fontSize: '28px', marginTop: '10px', marginBottom: '0', color: '#1a202c', fontFamily: 'Outfit, sans-serif' }}>Childhood</h3>
                 </div>
                 
-                <div className="journey-row">
-                  <div className="journey-text">
-                    <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '2px solid var(--accent-red)' }}>"Every great story starts with humble beginnings."</p>
-                    <p className="desc-text" style={{ color: '#4a5568', marginBottom: '15px' }}>
+                <div className="journey-row" style={{ alignItems: 'center', gap: '40px' }}>
+                  <div className="journey-text" style={{ flex: '0 0 45%' }}>
+                    <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '3px solid var(--accent-red)', paddingLeft: '20px', fontStyle: 'italic', fontSize: '18px', lineHeight: '1.5', marginBottom: '25px' }}>
+                      "Every great story starts with humble beginnings."
+                    </p>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8', marginBottom: '15px' }}>
                       Growing up with curiosity, determination, and dreams that never stopped growing.
                     </p>
-                    <p className="desc-text" style={{ color: '#666' }}>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8' }}>
                       Prabhu's journey is one of resilience, hard work, and gratitude.
                     </p>
                   </div>
                   
-                  <div className="journey-visual">
-                    <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)' }}>
-                      <img src="/assets/childhood_full_block.png" alt="Childhood photo collage" />
+                  <div className="journey-visual" style={{ flex: '0 0 55%' }}>
+                    <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: '8px', overflow: 'hidden', background: '#1a202c' }}>
+                      <img src="/assets/childhood_full_block.png" alt="Childhood photo collage" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
                     </div>
                   </div>
                 </div>
@@ -153,25 +257,27 @@ function App() {
             {/* Family Column */}
             <div className="journey-col-family">
               <div className="journey-content-wrapper">
-                <div>
-                  <span className="section-tag" style={{ color: 'var(--accent-red)' }}>Family Milestone</span>
-                  <h3 className="section-heading" style={{ fontSize: '24px', marginBottom: '15px', color: 'var(--bg-primary)' }}>Family</h3>
+                <div style={{ marginBottom: '25px' }}>
+                  <span className="section-tag" style={{ color: 'var(--accent-red)', fontSize: '11px', letterSpacing: '2px' }}>FAMILY MILESTONE</span>
+                  <h3 className="section-heading" style={{ fontSize: '28px', marginTop: '10px', marginBottom: '0', color: '#1a202c', fontFamily: 'Outfit, sans-serif' }}>Family</h3>
                 </div>
                 
-                <div className="journey-row">
-                  <div className="journey-text">
-                    <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '2px solid var(--accent-red)' }}>"The greatest success is not measured by business, but by family."</p>
-                    <p className="desc-text" style={{ color: '#4a5568', marginBottom: '15px' }}>
+                <div className="journey-row" style={{ alignItems: 'center', gap: '40px' }}>
+                  <div className="journey-text" style={{ flex: '0 0 45%' }}>
+                    <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '3px solid var(--accent-red)', paddingLeft: '20px', fontStyle: 'italic', fontSize: '18px', lineHeight: '1.5', marginBottom: '25px' }}>
+                      "The greatest success is not measured by business, but by family."
+                    </p>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8', marginBottom: '15px' }}>
                       A loving husband, a caring father, and the strength behind every achievement.
                     </p>
-                    <p className="desc-text" style={{ color: '#666' }}>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8' }}>
                       His family has been the absolute anchor through all phases of life.
                     </p>
                   </div>
                   
-                  <div className="journey-visual">
-                    <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)' }}>
-                      <img src="/assets/family_photo.png" alt="Prabhu Karunakaran Family" />
+                  <div className="journey-visual" style={{ flex: '0 0 55%' }}>
+                    <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', borderRadius: '8px', overflow: 'hidden', background: '#1a202c' }}>
+                      <img src="/assets/family_photo.png" alt="Prabhu Karunakaran Family" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
                     </div>
                   </div>
                 </div>
@@ -184,68 +290,82 @@ function App() {
       {/* Entrepreneurship Section */}
       <section id="entrepreneurship" className="section" style={{ background: '#FAF8F5', padding: '80px 0' }}>
         <div className="container">
-          <div className="ent-wrapper">
-            <div className="ent-left" style={{ textAlign: 'left' }}>
-              <span className="section-tag" style={{ color: 'var(--accent-red)' }}>Vision & Leadership</span>
-              <h2 className="section-heading" style={{ fontSize: '36px', color: 'var(--bg-primary)', marginBottom: '25px' }}>
-                Entrepreneurship
-              </h2>
-              
-              <ul className="ent-values" style={{ color: '#4a5568' }}>
-                <li className="ent-value-item">
-                  <span className="ent-value-dot" style={{ color: 'var(--accent-red)' }}>★</span> Founder & CEO of Exterprise Solutions - an award-winning enterprise technology firm helping businesses innovate, transform and grow.
-                </li>
-                <li className="ent-value-item">
-                  <span className="ent-value-dot" style={{ color: 'var(--accent-red)' }}>★</span> Specializing in Digital Transformation, AI, Data & Analytics, Cloud, and Enterprise Solutions.
-                </li>
-                <li className="ent-value-item">
-                  <span className="ent-value-dot" style={{ color: 'var(--accent-red)' }}>★</span> Trusted by global clients to deliver scalable, future-ready solutions.
-                </li>
-                <li className="ent-value-item">
-                  <span className="ent-value-dot" style={{ color: 'var(--accent-red)' }}>★</span> Presence across 3 Continents - North America, Asia, and Australia.
-                </li>
-                <li className="ent-value-item">
-                  <span className="ent-value-dot" style={{ color: 'var(--accent-red)' }}>★</span> Supporting communities and people through mentorship, employment, and philanthropy.
-                </li>
-                <li className="ent-value-item" style={{ gridColumn: '1 / -1' }}>
-                  <span className="ent-value-dot" style={{ color: 'var(--accent-red)' }}>★</span> Believing in giving back and creating opportunities for all.
-                </li>
-              </ul>
-              
-              {/* Presence map illustration */}
-              <div className="presence-map-container" style={{ margin: '40px 0', textAlign: 'center', position: 'relative' }}>
-                <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--bg-primary)', fontWeight: 'bold', marginBottom: '10px' }}>
-                  Presence Across 3 Continents
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <span className="section-tag" style={{ color: 'var(--accent-red)', fontSize: '12px', letterSpacing: '3px', display: 'block', marginBottom: '15px' }}>
+              VISION & LEADERSHIP
+            </span>
+            <h2 className="section-heading" style={{ fontSize: '42px', color: '#1a202c', fontFamily: 'Outfit, sans-serif', fontWeight: 700, margin: 0 }}>
+              Entrepreneurship
+            </h2>
+          </div>
+          
+          {/* Content Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '70px', marginBottom: '60px' }}>
+            {/* Left column - first 3 items */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
+                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
+                  Founder & CEO of Exterprise Solutions - an award-winning enterprise technology firm helping businesses innovate, transform and grow.
                 </p>
-                <img src="/assets/presence_map.png" alt="Exterprise Global Presence Map" style={{ maxWidth: '380px', width: '100%', display: 'block', margin: '0 auto', opacity: '0.9' }} />
               </div>
               
-              <div className="ent-stats" style={{ marginTop: '40px' }}>
-                <div className="stat-item" style={{ borderRight: '1px solid rgba(0,0,0,0.1)' }}>
-                  <div className="stat-number" style={{ color: 'var(--bg-primary)' }}>25+</div>
-                  <div className="stat-label" style={{ color: '#666' }}>Years of Leadership</div>
-                </div>
-                <div className="stat-item" style={{ borderRight: '1px solid rgba(0,0,0,0.1)' }}>
-                  <div className="stat-number" style={{ color: 'var(--bg-primary)' }}>500+</div>
-                  <div className="stat-label" style={{ color: '#666' }}>Successful Projects</div>
-                </div>
-                <div className="stat-item" style={{ borderRight: '1px solid rgba(0,0,0,0.1)' }}>
-                  <div className="stat-number" style={{ color: 'var(--bg-primary)' }}>100+</div>
-                  <div className="stat-label" style={{ color: '#666' }}>Happy Clients</div>
-                </div>
-                <div className="stat-item" style={{ borderRight: '1px solid rgba(0,0,0,0.1)' }}>
-                  <div className="stat-number" style={{ color: 'var(--bg-primary)' }}>3</div>
-                  <div className="stat-label" style={{ color: '#666' }}>Continents Presence</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number" style={{ color: 'var(--bg-primary)' }}>1</div>
-                  <div className="stat-label" style={{ color: '#666' }}>Mission: People First</div>
-                </div>
+              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
+                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
+                  Specializing in Digital Transformation, AI, Data & Analytics, Cloud, and Enterprise Solutions.
+                </p>
+              </div>
+              
+              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
+                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
+                  Trusted by global clients to deliver scalable, future-ready solutions.
+                </p>
               </div>
             </div>
             
-            <div className="ent-right">
-              <div className="img-frame" style={{ maxWidth: '440px', borderStyle: 'double', borderColor: 'var(--gold)', background: '#fff' }}>
+            {/* Right column - next 3 items */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
+                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
+                  Presence across 3 Continents - North America, Asia, and Australia.
+                </p>
+              </div>
+              
+              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
+                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
+                  Supporting communities and people through mentorship, employment, and philanthropy.
+                </p>
+              </div>
+              
+              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
+                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
+                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
+                  Believing in giving back and creating opportunities for all.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Map and Office Row */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+            {/* Left: Map */}
+            <div>
+              <p style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '3px', color: '#1a202c', fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontFamily: 'Montserrat, sans-serif' }}>
+                PRESENCE ACROSS 3 CONTINENTS
+              </p>
+              <div style={{ position: 'relative' }}>
+                <img src="/assets/presence_map.png" alt="Exterprise Global Presence Map" style={{ width: '100%', display: 'block' }} />
+              </div>
+            </div>
+            
+            {/* Right: Office Image */}
+            <div>
+              <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 12px 36px rgba(0,0,0,0.15)', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
                 <img src="/assets/entrepreneurship_office.png" alt="Office Workspace" style={{ width: '100%', display: 'block' }} />
               </div>
             </div>

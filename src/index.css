@@ -175,9 +175,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
   width: 100%;
-  aspect-ratio: 485 / 153;
+  aspect-ratio: 1693 / 929;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   display: flex;
   align-items: center;
   position: relative;
@@ -187,35 +187,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-rsvp-btn {
   position: absolute;
-  bottom: 12%;
-  right: 28%;
-  transform: translateX(50%);
-  padding: 1.2vw 2.5vw;
-  font-size: 1.2vw;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 4px;
+  left: 56.4%;
+  top: 80.8%;
+  width: 14.5%;
+  height: 5.8%;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-  border: 1px solid var(--gold-light);
-  color: var(--bg-primary);
   z-index: 10;
+  border-radius: 4px;
+  text-indent: -9999px; /* Hide text, just behave as click spot */
 }
 
 .hero-rsvp-btn:hover {
-  transform: translateX(50%) translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 768px) {
   .hero-rsvp-btn {
-    padding: 6px 14px;
-    font-size: 10px;
-    bottom: 10%;
+    left: 56.4%;
+    top: 80.8%;
+    width: 14.5%;
+    height: 5.8%;
   }
 }
 
