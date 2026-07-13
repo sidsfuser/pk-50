@@ -60,9 +60,24 @@ function App() {
 
   return (
     <>
+      {/* Mobile Menu Blur Overlay - positioned behind menu but over content */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'fixed',
+          top: '60px',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(3, 8, 18, 0.75)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          zIndex: 998,
+        }}></div>
+      )}
+
       {/* Navigation Header */}
       <header className="header">
-        <div className={`nav-container ${mobileMenuOpen ? 'menu-open' : ''}`}>
+        <div className="nav-container">
           <div className="logo-container" onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
             <img src="/assets/logo.png" alt="PK-50 Logo" className="logo-img" />
           </div>
@@ -195,7 +210,7 @@ function App() {
             lineHeight: '1',
             textShadow: '1px 1px 2px rgba(255,255,255,0.6)'
           }}>
-            PK-50
+            PK-50 
           </h1>
 
           {/* LOADED. TIMELESS. UNSTOPPABLE. banner */}
