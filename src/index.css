@@ -1256,6 +1256,275 @@ textarea.form-input-overlay {
   }
 }
 
+/* Mobile Navigation - Horizontal Scroll */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 15px;
+    height: 60px;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .desktop-menu-wrapper {
+    gap: 15px !important;
+  }
+
+  .nav-menu {
+    gap: 15px !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 5px 0;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 11px !important;
+    letter-spacing: 0.8px !important;
+    white-space: nowrap;
+  }
+
+  .btn-join {
+    padding: 8px 16px !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+  }
+}
+
+/* Hero Section Mobile */
+@media (max-width: 768px) {
+  .hero-text-overlay-col {
+    top: 5% !important;
+    right: 3% !important;
+    width: 55% !important;
+  }
+
+  .hero-text-overlay-col h1 {
+    font-size: 5vw !important;
+  }
+
+  .hero-text-overlay-col h2 {
+    font-size: 2vw !important;
+  }
+
+  .hero-text-overlay-col p {
+    font-size: 1.2vw !important;
+  }
+}
+
+/* Quick Nav Mobile */
+@media (max-width: 768px) {
+  .quick-nav-shelf {
+    padding: 15px 0 !important;
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .quick-icon {
+    font-size: 16px !important;
+  }
+
+  .quick-label {
+    font-size: 9px !important;
+    letter-spacing: 0.5px !important;
+  }
+}
+
+/* Sections Mobile - Reduce padding */
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0 !important;
+  }
+
+  .container {
+    padding: 0 15px !important;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .journey-col-childhood,
+  .journey-col-family {
+    padding: 25px 15px !important;
+  }
+
+  .journey-row {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .journey-text {
+    flex: 1 !important;
+  }
+
+  .journey-visual {
+    flex: 1 !important;
+  }
+}
+
+/* Entrepreneurship Mobile */
+@media (max-width: 768px) {
+  #entrepreneurship {
+    padding: 30px 0 !important;
+  }
+
+  #entrepreneurship img {
+    border-radius: 6px !important;
+  }
+}
+
+/* Celebration Mobile */
+@media (max-width: 768px) {
+  #celebration {
+    padding: 50px 0 !important;
+  }
+
+  .celebration-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .celebration-grid img {
+    border-radius: 6px !important;
+  }
+
+  .img-frame {
+    border-radius: 6px !important;
+  }
+}
+
+/* Friendship Mobile */
+@media (max-width: 768px) {
+  #friendship {
+    padding: 0 !important;
+  }
+
+  #friendship img {
+    border-radius: 0 !important;
+  }
+}
+
+/* RSVP Mobile */
+@media (max-width: 768px) {
+  #rsvp {
+    padding: 50px 0 !important;
+  }
+
+  .rsvp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .rsvp-left {
+    padding: 25px 15px !important;
+    min-height: auto !important;
+  }
+
+  .rsvp-right {
+    padding: 25px 15px !important;
+  }
+
+  .rsvp-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .form-group {
+    margin-bottom: 15px !important;
+  }
+
+  .form-input {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+
+  .btn-submit {
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+    margin-top: 10px !important;
+  }
+}
+
+/* Footer Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 0 !important;
+  }
+
+  footer img {
+    border-radius: 0 !important;
+  }
+}
+
+/* Typography Mobile */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.3px !important;
+  }
+
+  .section-tag {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .section-heading {
+    font-size: 24px !important;
+  }
+}
+
+/* Stats Mobile */
+@media (max-width: 768px) {
+  .ent-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+
+  .stat-number {
+    font-size: 24px !important;
+  }
+
+  .stat-label {
+    font-size: 9px !important;
+  }
+}
+
+/* Card Grid Mobile */
+@media (max-width: 768px) {
+  .grid-6 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .item-card {
+    padding: 12px !important;
+  }
+}
+
+/* Remove extra margins on mobile */
+@media (max-width: 768px) {
+  .ent-wrapper {
+    gap: 20px !important;
+  }
+
+  .friend-wrapper {
+    gap: 20px !important;
+  }
+
+  .rsvp-grid {
+    gap: 15px !important;
+  }
+}
+
 /* Swag Video scaling */
 .swag-video {
   width: 100%;
