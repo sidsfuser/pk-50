@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
   width: 100%;
-  aspect-ratio: 1024 / 405;
+  aspect-ratio: 485 / 153;
   background-size: cover;
   background-position: center;
   display: flex;

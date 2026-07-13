@@ -119,11 +119,15 @@ function App() {
         <img src="/assets/entrepreneurship_banner.png" alt="Entrepreneurship" />
       </section>
 
-      {/* Passion, Rolex & Friendship Sections */}
+      {/* Passion, Rolex & Swag Sections */}
       <section id="celebration" className="section-banner">
         <img src="/assets/collection_banner.jpg" alt="Passion & Collection" />
       </section>
-      <div id="friendship"></div>
+
+      {/* Friendship Section */}
+      <section id="friendship" className="section-banner">
+        <img src="/assets/friendship_banner.png" alt="Friendship" />
+      </section>
 
       {/* RSVP & Save the Date Section */}
       <section id="rsvp" className="section" style={{ background: '#FAF8F5' }}>
