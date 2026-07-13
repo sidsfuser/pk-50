@@ -197,28 +197,39 @@ function App() {
         >
           RSVP Now ★
         </button>
+      </section>
 
-        {/* Clickable Quick Nav Hotspots on the bottom gold bar */}
-        <div className="quick-nav-hotspots" style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          height: '14%',
-          display: 'flex',
-          zIndex: 5
-        }}>
-          <div style={{ flex: '0.413' }}></div> {/* Spacer for logo/left side */}
-          <div style={{ display: 'flex', flex: '0.587', width: '100%', height: '100%' }}>
-            <a onClick={() => scrollToSection('journey')} style={{ flex: 1, cursor: 'pointer' }} title="Childhood"></a>
-            <a onClick={() => scrollToSection('journey')} style={{ flex: 1, cursor: 'pointer' }} title="Family"></a>
-            <a onClick={() => scrollToSection('entrepreneurship')} style={{ flex: 1, cursor: 'pointer' }} title="Entrepreneurship"></a>
-            <a onClick={() => scrollToSection('friendship')} style={{ flex: 1, cursor: 'pointer' }} title="Friendship"></a>
-            <a onClick={() => scrollToSection('celebration')} style={{ flex: 1, cursor: 'pointer' }} title="Cars & Rolex"></a>
-            <a onClick={() => scrollToSection('rsvp')} style={{ flex: 1.2, cursor: 'pointer' }} title="Join The Party"></a>
+      {/* Quick Nav Shelf with interactive icons and labels */}
+      <div className="quick-nav-shelf">
+        <div className="container">
+          <div className="quick-grid">
+            <div className="quick-item" onClick={() => scrollToSection('journey')}>
+              <span className="quick-icon" style={{ fontSize: '20px' }}>🎓</span>
+              <span className="quick-label">Childhood</span>
+            </div>
+            <div className="quick-item" onClick={() => scrollToSection('journey')}>
+              <span className="quick-icon" style={{ fontSize: '20px' }}>👥</span>
+              <span className="quick-label">Family</span>
+            </div>
+            <div className="quick-item" onClick={() => scrollToSection('entrepreneurship')}>
+              <span className="quick-icon" style={{ fontSize: '20px' }}>📈</span>
+              <span className="quick-label">Entrepreneurship</span>
+            </div>
+            <div className="quick-item" onClick={() => scrollToSection('friendship')}>
+              <span className="quick-icon" style={{ fontSize: '20px' }}>🤝</span>
+              <span className="quick-label">Friendship</span>
+            </div>
+            <div className="quick-item" onClick={() => scrollToSection('celebration')}>
+              <span className="quick-icon" style={{ fontSize: '20px' }}>🚗</span>
+              <span className="quick-label">Cars & Rolex</span>
+            </div>
+            <div className="quick-item" onClick={() => scrollToSection('rsvp')}>
+              <span className="quick-icon" style={{ fontSize: '20px' }}>👑</span>
+              <span className="quick-label">Join The Party</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Life Journey Section */}
       <section id="journey" className="section" style={{ background: '#FAF8F5', padding: '80px 0' }}>
