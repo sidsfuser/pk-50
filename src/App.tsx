@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { submitRSVP, sendRSVPEmail } from './services/emailService';
 
 // Car labels for the single cars.png image
 const CAR_LABELS = ['CLASSIC MUSCLE', 'FERRARI 488', 'ROLLS-ROYCE CULLINAN', 'LAMBORGHINI HURACÁN', 'MUSTANG GT'];
@@ -32,13 +33,35 @@ function App() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) {
       alert('Please fill out Name and Email.');
       return;
     }
-    // Simulate API request
+
+    // Send thank you email
+    const emailSent = await submitRSVP({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      guests: formData.guests,
+      notes: formData.notes
+    });
+
+    if (emailSent) {
+      console.log('Thank you email sent successfully');
+    } else {
+      // Fallback to mailto if email service fails
+      sendRSVPEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        guests: formData.guests,
+        notes: formData.notes
+      });
+    }
+
     setSubmitted(true);
   };
 
