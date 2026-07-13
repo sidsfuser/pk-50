@@ -38,25 +38,57 @@ npm install @emailjs/browser
 
 **Content:**
 ```
-Dear {{to_name}},
-
-Thank you for joining Prabhu Karunakaran's golden jubilee milestone!
-
-Your RSVP Details:
-- Name: {{to_name}}
-- Email: {{to_email}}
-- Phone: {{phone}}
-- Number of Guests: {{guest_count}}
-- Special Notes: {{notes}}
-
-Event Details:
-Date: {{event_date}}
-Location: {{event_location}}
-
-We can't wait to celebrate with you!
-
-Best regards,
-PK-50 Celebration Team
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 16px; background-color: #fff8f1">
+  <div style="max-width: 600px; margin: auto; padding: 16px">
+    <a style="text-decoration: none; outline: none" href="https://pk-50.onrender.com" target="_blank">
+      <img
+        style="height: 32px; vertical-align: middle"
+        height="32px"
+        src="https://pk-50.onrender.com/assets/logo.png"
+        alt="PK-50 Logo"
+      />
+    </a>
+    <p>Welcome to the PK-50 Celebration family! We're excited to have you join us.</p>
+    <p>
+      Your RSVP has been successfully received, and you're now registered for Prabhu Karunakaran's golden jubilee milestone.
+    </p>
+    <p><strong>Your RSVP Details:</strong><br>
+    Name: {{to_name}}<br>
+    Email: {{to_email}}<br>
+    Phone: {{phone}}<br>
+    Number of Guests: {{guest_count}}<br>
+    Special Notes: {{notes}}
+    </p>
+    <p><strong>Event Details:</strong><br>
+    Date: {{event_date}}<br>
+    Location: {{event_location}}
+    </p>
+    <p>
+      <a
+        style="
+          display: inline-block;
+          text-decoration: none;
+          outline: none;
+          color: #fff;
+          background-color: #b81d24;
+          padding: 12px 24px;
+          border-radius: 4px;
+        "
+        href="https://pk-50.onrender.com"
+        target="_blank"
+      >
+        Visit PK-50 Website
+      </a>
+    </p>
+    <p>
+      If you have any questions or need help, our support team is just an email away at
+      <a href="mailto:sid.sfuser@gmail.com" style="text-decoration: none; outline: none; color: #b81d24"
+        >sid.sfuser@gmail.com</a
+      >. We're here to assist you every step of the way!
+    </p>
+    <p>Best regards,<br />The PK-50 Celebration Team</p>
+  </div>
+</div>
 ```
 
 4. Save the template and note down your **Template ID** (e.g., `template_xyz789`)
