@@ -11,7 +11,7 @@ function App() {
   });
   
   const [submitted, setSubmitted] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -51,57 +51,10 @@ function App() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
-    setMobileMenuOpen(false);
-  };
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
     <>
-      {/* Mobile Blur Overlay - only on mobile */}
-      {mobileMenuOpen && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(3, 8, 18, 0.85)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
-          zIndex: 997,
-        }} />
-      )}
-
-      {/* Mobile Menu Overlay - only on mobile */}
-      {mobileMenuOpen && (
-        <div style={{
-          position: 'fixed',
-          top: '60px',
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 999,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '25px',
-        }}>
-          <span className="nav-link" onClick={() => scrollToSection('home')} style={{ fontSize: '18px', padding: '10px 0' }}>Home</span>
-          <span className="nav-link" onClick={() => scrollToSection('about')} style={{ fontSize: '18px', padding: '10px 0' }}>About PK</span>
-          <span className="nav-link" onClick={() => scrollToSection('journey')} style={{ fontSize: '18px', padding: '10px 0' }}>Life Journey</span>
-          <span className="nav-link" onClick={() => scrollToSection('entrepreneurship')} style={{ fontSize: '18px', padding: '10px 0' }}>Entrepreneurship</span>
-          <span className="nav-link" onClick={() => scrollToSection('friendship')} style={{ fontSize: '18px', padding: '10px 0' }}>Friendship</span>
-          <span className="nav-link" onClick={() => scrollToSection('celebration')} style={{ fontSize: '18px', padding: '10px 0' }}>Celebration</span>
-          <button className="btn-join" onClick={() => scrollToSection('rsvp')} style={{ marginTop: '15px' }}>
-            Join The Party ★
-          </button>
-        </div>
-      )}
-
       {/* Navigation Header */}
       <header className="header">
         <div className="nav-container">
@@ -124,54 +77,9 @@ function App() {
             </button>
           </nav>
 
-          {/* Mobile Hamburger Menu Button */}
-          <button
-            className="hamburger-menu"
-            onClick={toggleMobileMenu}
-            style={{
-              display: 'none',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              width: '30px',
-              height: '25px',
-              background: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-              padding: 0,
-              zIndex: 1002,
-            }}
-            aria-label="Toggle menu"
-          >
-            <span
-              style={{
-                width: '30px',
-                height: '3px',
-                background: 'var(--gold)',
-                borderRadius: '2px',
-                transition: 'all 0.3s ease',
-                transform: mobileMenuOpen ? 'rotate(45deg) translate(8px, 8px)' : 'none',
-              }}
-            ></span>
-            <span
-              style={{
-                width: '30px',
-                height: '3px',
-                background: 'var(--gold)',
-                borderRadius: '2px',
-                transition: 'all 0.3s ease',
-                opacity: mobileMenuOpen ? 0 : 1,
-              }}
-            ></span>
-            <span
-              style={{
-                width: '30px',
-                height: '3px',
-                background: 'var(--gold)',
-                borderRadius: '2px',
-                transition: 'all 0.3s ease',
-                transform: mobileMenuOpen ? 'rotate(-45deg) translate(8px, -8px)' : 'none',
-              }}
-            ></span>
+          {/* Mobile Join Button */}
+          <button className="btn-join mobile-join-btn" onClick={() => scrollToSection('rsvp')} style={{ display: 'none' }}>
+            Join The Party ★
           </button>
         </div>
       </header>
@@ -440,7 +348,7 @@ function App() {
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: '30px', textAlign: 'left' }}>
                 <span className="section-tag" style={{ color: 'var(--accent-red)' }}>★ The Swag ★</span>
-                <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>The Swag</h2>
+                {/* <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>The Swag</h2> */}
                 <p className="serif-title" style={{ color: '#666', fontSize: '20px', margin: '5px 0 0 0' }}>
                   Style is temporary. Class is permanent.
                 </p>
