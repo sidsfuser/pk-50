@@ -11,9 +11,9 @@ export interface RSVPData {
 
 // EmailJS Configuration
 // Replace these with your actual EmailJS credentials from https://www.emailjs.com/
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'service_9wdizvp';
+const EMAILJS_TEMPLATE_ID = 'YMcbsXuTzKiqzXWaeh1T';
+const EMAILJS_PUBLIC_KEY = '6DGKw3xclRqTiK1Nm';
 
 export const submitRSVP = async (data: RSVPData): Promise<boolean> => {
   try {
@@ -50,26 +50,10 @@ export const submitRSVP = async (data: RSVPData): Promise<boolean> => {
   }
 };
 
-// Fallback: Using mailto link (opens user's email client)
-export const sendRSVPEmail = (data: RSVPData): void => {
-  const subject = encodeURIComponent('PK-50 Celebration - Thank You for RSVP!');
-  const body = encodeURIComponent(
-    `Dear ${data.name},\n\n` +
-    `Thank you for joining Prabhu Karunakaran's golden jubilee milestone!\n\n` +
-    `Your RSVP Details:\n` +
-    `- Name: ${data.name}\n` +
-    `- Email: ${data.email}\n` +
-    `- Phone: ${data.phone}\n` +
-    `- Number of Guests: ${data.guests}\n` +
-    `- Notes: ${data.notes || 'None'}\n\n` +
-    `Event Details:\n` +
-    `Date: April 3, 2027\n` +
-    `Location: Dallas, Texas\n\n` +
-    `We can't wait to celebrate with you!\n\n` +
-    `Best regards,\n` +
-    `PK-50 Celebration Team`
-  );
-
-  // Open default email client with pre-filled message
-  window.location.href = `mailto:${data.email}?subject=${subject}&body=${body}`;
+// Note: Mailto fallback removed to prevent dialog popup
+// If EmailJS is not configured, the form will show success message without sending email
+// To enable email sending, configure EmailJS credentials above
+export const sendRSVPEmail = (_data: RSVPData): void => {
+  // No-op: EmailJS is required for email sending
+  console.log('EmailJS not configured. Email not sent.');
 };

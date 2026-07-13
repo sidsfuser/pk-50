@@ -40,7 +40,7 @@ function App() {
       return;
     }
 
-    // Send thank you email
+    // Send thank you email (requires EmailJS configuration)
     const emailSent = await submitRSVP({
       name: formData.name,
       email: formData.email,
@@ -52,14 +52,7 @@ function App() {
     if (emailSent) {
       console.log('Thank you email sent successfully');
     } else {
-      // Fallback to mailto if email service fails
-      sendRSVPEmail({
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        guests: formData.guests,
-        notes: formData.notes
-      });
+      console.log('Email not sent. Configure EmailJS to enable email sending.');
     }
 
     setSubmitted(true);
