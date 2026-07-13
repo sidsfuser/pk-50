@@ -309,7 +309,7 @@ function App() {
           }}
         >
           <img
-            src="\assets\enter.png"
+            src="/assets/enter.png"
             alt="Entrepreneurship"
             style={{
               width: "100%",
@@ -328,7 +328,7 @@ function App() {
             {/* Left column: Cars and Rolex */}
             <div style={{ flex: 1 }}>
               <img
-                src="assets\car and rolex.png"
+                src="/assets/car%20and%20rolex.png"
                 alt="Cars & Rolex"
                 style={{
                   width: "100%",
@@ -367,7 +367,7 @@ function App() {
       {/* Friendship Section - Full Width Banner */}
       <section id="friendship" style={{ padding: 0 }}>
         <img
-          src="assets\friendship.png"
+          src="/assets/friendship.png"
           alt="Friendship"
           style={{
             width: "100%",
