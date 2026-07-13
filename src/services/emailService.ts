@@ -10,9 +10,13 @@ export interface RSVPData {
 }
 
 // EmailJS Configuration
-// Replace these with your actual EmailJS credentials from https://www.emailjs.com/
+// Get these values from https://dashboard.emailjs.com/
+// 1. Service ID: Go to Email Services → Copy your Gmail service ID (e.g., service_xxxxx)
+// 2. Template ID: Go to Email Templates → Create a new template → Copy the template ID (e.g., template_xxxxx)
+// 3. Public Key: Go to Account → API Keys → Copy your Public Key
+
 const EMAILJS_SERVICE_ID = 'service_9wdizvp';
-const EMAILJS_TEMPLATE_ID = 'YMcbsXuTzKiqzXWaeh1T';
+const EMAILJS_TEMPLATE_ID = 'template_1kb322u';
 const EMAILJS_PUBLIC_KEY = '6DGKw3xclRqTiK1Nm';
 
 export const submitRSVP = async (data: RSVPData): Promise<boolean> => {
