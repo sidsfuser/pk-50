@@ -55,6 +55,7 @@ function App() {
   };
 
   const toggleMobileMenu = () => {
+    console.log('Toggling mobile menu, current state:', !mobileMenuOpen);
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
@@ -139,9 +140,9 @@ function App() {
               style={{
                 position: 'fixed',
                 top: '60px',
-                left: 0,
-                right: 0,
-                bottom: 0,
+                left: '0',
+                right: '0',
+                bottom: '0',
                 background: 'rgba(3, 8, 18, 0.85)',
                 backdropFilter: 'blur(12px)',
                 WebkitBackdropFilter: 'blur(12px)',
@@ -151,6 +152,7 @@ function App() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '30px',
+                padding: '20px',
               }}
             >
               <span className="nav-link" onClick={() => scrollToSection('home')} style={{ fontSize: '18px' }}>Home</span>
