@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
 
-// List of cars (5 cars in revised mockup)
-const CARS = [
-  { id: 1, name: 'Classic Muscle', image: '/assets/car_strip_1.png', year: 'Vintage' },
-  { id: 2, name: 'Ferrari 488', image: '/assets/car_strip_2.png', year: 'Sport' },
-  { id: 3, name: 'Rolls-Royce Cullinan', image: '/assets/car_strip_3.png', year: 'Luxury' },
-  { id: 4, name: 'Lamborghini Huracán', image: '/assets/car_strip_4.png', year: 'Supercar' },
-  { id: 5, name: 'Mustang GT', image: '/assets/car_strip_5.png', year: 'Modern Muscle' },
-];
+// Car labels for the single cars.png image
+const CAR_LABELS = ['CLASSIC MUSCLE', 'FERRARI 488', 'ROLLS-ROYCE CULLINAN', 'LAMBORGHINI HURACÁN', 'MUSTANG GT'];
 
-// List of watches (6 watches in revised mockup)
-const WATCHES = [
-  { id: 1, name: 'Datejust 41', image: '/assets/watch_strip_1.png', model: 'Oystersteel & Gold' },
-  { id: 2, name: 'Submariner', image: '/assets/watch_strip_2.png', model: 'Green Dial "Hulk"' },
-  { id: 3, name: 'Daytona', image: '/assets/watch_strip_3.png', model: 'Yellow Gold / Black' },
-  { id: 4, name: 'GMT-Master II', image: '/assets/watch_strip_4.png', model: 'Batman / Pepsi' },
-  { id: 5, name: 'Yacht-Master', image: '/assets/watch_strip_5.png', model: 'Platinum Dial' },
-  { id: 6, name: 'Sky-Dweller', image: '/assets/watch_strip_6.png', model: 'Blue Dial / Gold' },
+// Watch labels for the single rolex.png image
+const WATCH_LABELS = [
+  { name: 'DATEJUST 41', model: 'Oystersteel' },
+  { name: 'SUBMARINER', model: 'Green' },
+  { name: 'DAYTONA', model: 'Yellow' },
+  { name: 'GMT-MASTER II', model: 'Batman' },
+  { name: 'YACHT-MASTER', model: 'Platinum' },
+  { name: 'SKY-DWELLER', model: 'Blue' }
 ];
 
 function App() {
@@ -248,10 +242,10 @@ function App() {
                     <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '3px solid var(--accent-red)', paddingLeft: '20px', fontStyle: 'italic', fontSize: '18px', lineHeight: '1.5', marginBottom: '25px' }}>
                       "Every great story starts with humble beginnings."
                     </p>
-                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8', marginBottom: '15px' }}>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '20px', lineHeight: '1.8', marginBottom: '15px' }}>
                       Growing up with curiosity, determination, and dreams that never stopped growing.
                     </p>
-                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8' }}>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '20px', lineHeight: '1.8' }}>
                       Prabhu's journey is one of resilience, hard work, and gratitude.
                     </p>
                   </div>
@@ -276,10 +270,10 @@ function App() {
                     <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '3px solid var(--accent-red)', paddingLeft: '20px', fontStyle: 'italic', fontSize: '18px', lineHeight: '1.5', marginBottom: '25px' }}>
                       "The greatest success is not measured by business, but by family."
                     </p>
-                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8', marginBottom: '15px' }}>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '20px', lineHeight: '1.8', marginBottom: '15px' }}>
                       A loving husband, a caring father, and the strength behind every achievement.
                     </p>
-                    <p className="desc-text" style={{ color: '#666', fontSize: '14px', lineHeight: '1.8' }}>
+                    <p className="desc-text" style={{ color: '#666', fontSize: '20px', lineHeight: '1.8' }}>
                       His family has been the absolute anchor through all phases of life.
                     </p>
                   </div>
@@ -295,9 +289,9 @@ function App() {
       </section>
 
       {/* Entrepreneurship Section */}
-      <section id="entrepreneurship" className="section" style={{ background: '#eee5db', padding: '80px 0' }}>
+      <section id="entrepreneurship" className="section" style={{ background: '#eee5db', padding: '60px 0' }}>
         <div className="container">
-          <div className="ent-wrapper" style={{
+          <div style={{
             display: 'flex',
             background: '#fdfcf7',
             border: '1px solid rgba(212, 175, 55, 0.3)',
@@ -306,39 +300,39 @@ function App() {
             overflow: 'hidden'
           }}>
             {/* Left side text and details */}
-            <div className="ent-left" style={{ flex: '0 0 55%', padding: '40px', background: '#fdfcf7' }}>
+            <div className="ent-left" style={{ flex: '0 0 55%', padding: '35px' }}>
               <span className="section-tag" style={{ color: 'var(--accent-red)', fontSize: '11px', letterSpacing: '2px', display: 'block', marginBottom: '8px', textAlign: 'left' }}>VISION & LEADERSHIP</span>
               <h2 className="section-heading" style={{ fontSize: '32px', color: '#0f2942', fontFamily: 'Outfit, sans-serif', fontWeight: '800', marginTop: '5px', marginBottom: '15px', textTransform: 'uppercase', textAlign: 'left' }}>Entrepreneurship</h2>
               
               <div style={{ color: 'var(--accent-red)', margin: '5px 0 20px 0', borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: '10px', textAlign: 'left' }}>★</div>
               
-              <p style={{ color: '#0f2942', fontSize: '16px', fontWeight: '700', lineHeight: '1.6', marginBottom: '25px', textAlign: 'left', fontFamily: 'Outfit, sans-serif' }}>
+              <p style={{ color: '#0f2942', fontSize: '22px', fontWeight: '700', lineHeight: '1.6', marginBottom: '25px', textAlign: 'left', fontFamily: 'Outfit, sans-serif' }}>
                 Founder & CEO of Exterprise Solutions – an award-winning enterprise technology firm helping businesses innovate, transform and grow.
               </p>
               
               {/* Bullets & Map sub-row */}
-              <div className="ent-sub-row" style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', textAlign: 'left' }}>
+              <div className="ent-sub-row" style={{ display: 'flex', gap: '25px', alignItems: 'flex-start', textAlign: 'left' }}>
                 {/* Bullets */}
                 <div style={{ flex: '0 0 55%' }}>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '18px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '10px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
                       Specializing in Digital Transformation, AI, Data & Analytics, Cloud, and Enterprise Solutions.
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '18px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '10px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
                       Trusted by global clients to deliver scalable, future-ready solutions.
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '18px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '10px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
                       Presence across 3 Continents – North America, Asia, and Australia.
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '18px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '10px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
                       Supporting communities and people through mentorship, employment, and philanthropy.
                     </li>
-                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '18px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '10px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
                       Believing in giving back and creating opportunities for all.
                     </li>
                   </ul>
@@ -348,8 +342,8 @@ function App() {
                 <div style={{ flex: '0 0 45%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingLeft: '10px', borderLeft: '1px solid rgba(0,0,0,0.05)' }}>
                   <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', color: '#0f2942', fontWeight: 'bold', marginBottom: '4px' }}>Presence Across</span>
                   <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '3px', color: '#c41e3a', fontWeight: '800', marginBottom: '10px' }}>3 Continents</span>
-                  <img src="/assets/presence_map.png" alt="Exterprise Global Presence Map" style={{ width: '100%', maxWidth: '240px', display: 'block', opacity: '0.85' }} />
-                  <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', fontSize: '8px', textTransform: 'uppercase', letterSpacing: '1px', color: '#666', fontWeight: 'bold', marginTop: '10px' }}>
+                  <img src="/assets/presence_map.png" alt="Exterprise Global Presence Map" style={{ width: '100%', maxWidth: '220px', display: 'block', opacity: '0.85' }} />
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', color: '#666', fontWeight: 'bold', marginTop: '10px' }}>
                     <span>North America</span>
                     <span style={{ color: '#d4af37' }}>|</span>
                     <span>Asia</span>
@@ -360,41 +354,41 @@ function App() {
               </div>
               
               {/* Stats Box at the bottom */}
-              <div className="ent-stats-box" style={{ 
+              <div style={{ 
                 border: '1.5px solid rgba(212, 175, 55, 0.4)', 
                 borderRadius: '8px', 
                 background: '#fdfcf7', 
-                padding: '20px', 
-                marginTop: '35px',
+                padding: '18px', 
+                marginTop: '30px',
                 display: 'grid',
                 gridTemplateColumns: 'repeat(5, 1fr)',
-                gap: '10px'
+                gap: '8px'
               }}>
                 <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
-                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>25+</h4>
-                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Years of Leadership</p>
+                  <h4 style={{ fontSize: '24px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>25+</h4>
+                  <p style={{ fontSize: '12px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Years of Leadership</p>
                 </div>
                 <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
-                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>500+</h4>
-                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Successful Projects</p>
+                  <h4 style={{ fontSize: '24px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>500+</h4>
+                  <p style={{ fontSize: '12px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Successful Projects</p>
                 </div>
                 <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
-                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>100+</h4>
-                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Happy Clients</p>
+                  <h4 style={{ fontSize: '24px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>100+</h4>
+                  <p style={{ fontSize: '12px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Happy Clients</p>
                 </div>
                 <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
-                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>3</h4>
-                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Continents Presence</p>
+                  <h4 style={{ fontSize: '24px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>3</h4>
+                  <p style={{ fontSize: '12px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Continents Presence</p>
                 </div>
                 <div style={{ textAlign: 'center' }}>
-                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>1</h4>
-                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Mission: People First</p>
+                  <h4 style={{ fontSize: '24px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>1</h4>
+                  <p style={{ fontSize: '12px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Mission: People First</p>
                 </div>
               </div>
             </div>
             
             {/* Right side single office workspace skyline image */}
-            <div className="ent-right" style={{ flex: '0 0 45%', minHeight: '450px' }}>
+            <div className="ent-right" style={{ flex: '0 0 45%', minHeight: '420px' }}>
               <img src="/assets/entrepreneurship_office.png" alt="Office Workspace" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
@@ -407,54 +401,50 @@ function App() {
           <div className="celebration-grid">
             {/* Left column: Cars and Rolex */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
-              {/* Cars Subsection */}
-              <div>
-                <div style={{ marginBottom: '30px', textAlign: 'left' }}>
-                  <span className="section-tag" style={{ color: 'var(--accent-red)' }}>★ Passion About Cars ★</span>
-                  <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>Passion About Cars</h2>
-                  <p className="serif-title" style={{ color: '#666', fontSize: '14px', margin: '5px 0 0 0' }}>
-                    "Cars are not machines. They're emotion. They're engineering. They're freedom."
-                  </p>
-                </div>
-                
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }} className="grid-mobile-stack">
-                  {CARS.map((car) => (
-                    <div key={car.id} className="item-card" style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)', padding: '10px' }}>
-                      <div className="item-img-container" style={{ height: '70px', overflow: 'hidden', borderRadius: '4px' }}>
-                        <img src={car.image} alt={car.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      </div>
-                      <div style={{ marginTop: '8px', textAlign: 'center' }}>
-                        <h4 style={{ fontSize: '10px', color: 'var(--bg-primary)', margin: 0, fontWeight: 'bold' }}>{car.name}</h4>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+               {/* Cars Subsection */}
+               <div>
+                 <div style={{ marginBottom: '30px', textAlign: 'left' }}>
+                   <span className="section-tag" style={{ color: 'var(--accent-red)' }}>★ Passion About Cars ★</span>
+                   <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>Passion About Cars</h2>
+                   <p className="serif-title" style={{ color: '#666', fontSize: '20px', margin: '5px 0 0 0' }}>
+                     "Cars are not machines. They're emotion. They're engineering. They're freedom."
+                   </p>
+                 </div>
+                 
+                 <div style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)', padding: '10px', borderRadius: '4px' }}>
+                   <img src="/assets/cars.png" alt="Car Collection" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
+                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px', marginTop: '12px' }}>
+                     {CAR_LABELS.map((label, idx) => (
+                       <div key={idx} style={{ textAlign: 'center' }}>
+                         <p style={{ fontSize: '14px', color: '#666', margin: 0, fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{label}</p>
+                       </div>
+                     ))}
+                   </div>
+                 </div>
+               </div>
 
-              {/* Rolex Subsection */}
-              <div>
-                <div style={{ marginBottom: '30px', textAlign: 'left' }}>
-                  <span className="section-tag" style={{ color: 'var(--accent-red)' }}>★ Love for Rolex ★</span>
-                  <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>Love for Rolex</h2>
-                  <p className="serif-title" style={{ color: '#666', fontSize: '14px', margin: '5px 0 0 0' }}>
-                    Precision. Prestige. Performance. A symbol of excellence and timeless legacy.
-                  </p>
-                </div>
-                
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '10px' }} className="grid-mobile-stack">
-                  {WATCHES.map((watch) => (
-                    <div key={watch.id} className="item-card" style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)', padding: '8px' }}>
-                      <div className="item-img-container" style={{ height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={watch.image} alt={watch.name} style={{ maxHeight: '100%', objectFit: 'contain' }} />
-                      </div>
-                      <div style={{ marginTop: '8px', textAlign: 'center' }}>
-                        <h4 style={{ fontSize: '9px', color: 'var(--bg-primary)', margin: 0, fontWeight: 'bold' }}>{watch.name}</h4>
-                        <p style={{ fontSize: '8px', color: '#888', margin: 0 }}>{watch.model.split(' ')[0]}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+               {/* Rolex Subsection */}
+               <div>
+                 <div style={{ marginBottom: '30px', textAlign: 'left' }}>
+                   <span className="section-tag" style={{ color: 'var(--accent-red)' }}>★ Love for Rolex ★</span>
+                   <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>Love for Rolex</h2>
+                   <p className="serif-title" style={{ color: '#666', fontSize: '20px', margin: '5px 0 0 0' }}>
+                     Precision. Prestige. Performance. A symbol of excellence and timeless legacy.
+                   </p>
+                 </div>
+                 
+                 <div style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)', padding: '10px', borderRadius: '4px' }}>
+                   <img src="/assets/rolex.png" alt="Rolex Collection" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
+                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '6px', marginTop: '12px' }}>
+                     {WATCH_LABELS.map((watch, idx) => (
+                       <div key={idx} style={{ textAlign: 'center' }}>
+                         <p style={{ fontSize: '14px', color: '#666', margin: 0, fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px', lineHeight: '1.3' }}>{watch.name}</p>
+                         <p style={{ fontSize: '14px', color: '#888', margin: '2px 0 0 0' }}>{watch.model}</p>
+                       </div>
+                     ))}
+                   </div>
+                 </div>
+               </div>
             </div>
 
             {/* Right column: Swag Video Section */}
@@ -462,67 +452,181 @@ function App() {
               <div style={{ marginBottom: '30px', textAlign: 'left' }}>
                 <span className="section-tag" style={{ color: 'var(--accent-red)' }}>★ The Swag ★</span>
                 <h2 className="section-heading" style={{ fontSize: '28px', color: 'var(--bg-primary)' }}>The Swag</h2>
-                <p className="serif-title" style={{ color: '#666', fontSize: '14px', margin: '5px 0 0 0' }}>
+                <p className="serif-title" style={{ color: '#666', fontSize: '20px', margin: '5px 0 0 0' }}>
                   Style is temporary. Class is permanent.
                 </p>
               </div>
               
-              <div className="img-frame" style={{ borderWidth: '4px', background: '#fff', boxShadow: '0 8px 24px rgba(0,0,0,0.08)', borderRadius: '8px', overflow: 'hidden', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <video 
-                  src="/assets/pk_video.mp4" 
-                  poster="/assets/swag.png" 
-                  controls 
-                  className="swag-video" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '350px' }}
-                />
-              </div>
+               <div className="img-frame" style={{ borderWidth: '4px', background: '#fff', boxShadow: '0 8px 24px rgba(0,0,0,0.08)', borderRadius: '8px', overflow: 'hidden', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                 <video 
+                   src="/assets/pk_video.mp4" 
+                   poster="/assets/thumbnail.png"
+                   controls 
+                   className="swag-video" 
+                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '350px' }}
+                 >
+                   Your browser does not support the video tag.
+                 </video>
+               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Friendship Section */}
-      <section id="friendship" className="section" style={{ background: '#FAF8F5', padding: '80px 0' }}>
-        <div className="container">
-          <div className="friend-wrapper">
-            <div className="friend-left" style={{ textAlign: 'left' }}>
-              <span className="section-tag" style={{ color: 'var(--accent-red)' }}>Life's Greatest Bond</span>
-              <h2 className="section-heading" style={{ fontSize: '36px', color: 'var(--bg-primary)', marginBottom: '20px' }}>
-                Friendship
-              </h2>
-              <p className="quote-serif" style={{ color: '#1a202c', borderLeft: '2px solid var(--accent-red)' }}>"Friendship is life's greatest investment."</p>
-              <p className="desc-text" style={{ color: '#4a5568', marginBottom: '25px' }}>
-                Success is empty without people to share it with. Over the past five decades, Prabhu has built bonds that transcend distances and endure through time.
-              </p>
+      {/* Friendship Section - Full Width Banner */}
+      <section id="friendship" className="section" style={{ background: '#f5f0e8', padding: '0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ maxWidth: '1600px', margin: '0 auto', padding: '60px 20px' }}>
+          {/* Left Side: Text and Icons */}
+          <div style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+            <div style={{ flex: '0 0 50%', position: 'relative' }}>
+              {/* Decorative Balloons */}
+              <div style={{ position: 'absolute', top: '-40px', left: '-20px', fontSize: '80px', zIndex: 1, lineHeight: 1 }}>🎈</div>
+              <div style={{ position: 'absolute', top: '-20px', left: '40px', fontSize: '90px', zIndex: 0 }}>🎈</div>
               
-              <div className="friend-categories">
-                <div className="friend-cat-card" style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)' }}>
-                  <div className="friend-cat-icon">🎓</div>
-                  <div className="friend-cat-label" style={{ color: '#1a202c' }}>College Days</div>
+              {/* Section Title */}
+              <div style={{ marginBottom: '20px', paddingTop: '20px' }}>
+                <h3 style={{ 
+                  fontSize: '11px', 
+                  fontWeight: '700', 
+                  color: '#c41e3a', 
+                  letterSpacing: '3px', 
+                  textTransform: 'uppercase',
+                  margin: '0 0 15px 0'
+                }}>
+                  LIFE'S GREATEST BOND
+                </h3>
+                <h2 style={{ 
+                  fontSize: '48px', 
+                  fontWeight: '900', 
+                  color: '#1a365d', 
+                  margin: '0 0 25px 0',
+                  fontFamily: 'Outfit, sans-serif',
+                  letterSpacing: '1px'
+                }}>
+                  Friendship
+                </h2>
+                
+                {/* Red Line */}
+                <div style={{ 
+                  width: '40px', 
+                  height: '3px', 
+                  background: '#c41e3a', 
+                  marginBottom: '25px' 
+                }}></div>
+                
+                <p style={{ 
+                  fontSize: '18px', 
+                  color: '#2d3748', 
+                  fontStyle: 'italic', 
+                  marginBottom: '20px',
+                  lineHeight: '1.6'
+                }}>
+                  "Friendship is life's greatest investment."
+                </p>
+                <p style={{ 
+                  fontSize: '14px', 
+                  color: '#4a5568', 
+                  lineHeight: '1.8',
+                  marginBottom: '40px'
+                }}>
+                  Success is empty without people to share it with. Over the past five decades, Prabhu has built bonds that transcend distances and endure through time.
+                </p>
+              </div>
+              
+              {/* Icon Categories Row */}
+              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                <div style={{ 
+                  flex: '0 0 130px', 
+                  textAlign: 'center',
+                  padding: '20px 15px',
+                  background: '#fdfcf7',
+                  border: '1px solid rgba(212,175,55,0.3)',
+                  borderRadius: '4px'
+                }}>
+                  <div style={{ fontSize: '40px', marginBottom: '12px' }}>🎓</div>
+                  <div style={{ fontSize: '14px', color: '#2d3748', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: '1.5' }}>
+                    COLLEGE<br />DAYS
+                  </div>
                 </div>
-                <div className="friend-cat-card" style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)' }}>
-                  <div className="friend-cat-icon">💼</div>
-                  <div className="friend-cat-label" style={{ color: '#1a202c' }}>Business Partners</div>
+                
+                <div style={{ 
+                  flex: '0 0 130px', 
+                  textAlign: 'center',
+                  padding: '20px 15px',
+                  background: '#fdfcf7',
+                  border: '1px solid rgba(212,175,55,0.3)',
+                  borderRadius: '4px'
+                }}>
+                  <div style={{ fontSize: '40px', marginBottom: '12px' }}>💼</div>
+                  <div style={{ fontSize: '14px', color: '#2d3748', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: '1.5' }}>
+                    BUSINESS<br />PARTNERS
+                  </div>
                 </div>
-                <div className="friend-cat-card" style={{ background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)' }}>
-                  <div className="friend-cat-icon">✈️</div>
-                  <div className="friend-cat-label" style={{ color: '#1a202c' }}>Travel Memories</div>
+                
+                <div style={{ 
+                  flex: '0 0 130px', 
+                  textAlign: 'center',
+                  padding: '20px 15px',
+                  background: '#fdfcf7',
+                  border: '1px solid rgba(212,175,55,0.3)',
+                  borderRadius: '4px'
+                }}>
+                  <div style={{ fontSize: '40px', marginBottom: '12px' }}>✈️</div>
+                  <div style={{ fontSize: '14px', color: '#2d3748', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: '1.5' }}>
+                    TRAVEL<br />MEMORIES
+                  </div>
                 </div>
-                <div className="friend-cat-card" style={{ gridColumn: 'span 1.5', background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)' }}>
-                  <div className="friend-cat-icon">🎉</div>
-                  <div className="friend-cat-label" style={{ color: '#1a202c' }}>Celebrations</div>
+                
+                <div style={{ 
+                  flex: '0 0 130px', 
+                  textAlign: 'center',
+                  padding: '20px 15px',
+                  background: '#fdfcf7',
+                  border: '1px solid rgba(212,175,55,0.3)',
+                  borderRadius: '4px'
+                }}>
+                  <div style={{ fontSize: '40px', marginBottom: '12px' }}>🎉</div>
+                  <div style={{ fontSize: '14px', color: '#2d3748', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: '1.5' }}>
+                    CELEBRATIONS
+                  </div>
                 </div>
-                <div className="friend-cat-card" style={{ gridColumn: 'span 1.5', background: '#fdfcf7', border: '1px solid rgba(212,175,55,0.2)' }}>
-                  <div className="friend-cat-icon">🏆</div>
-                  <div className="friend-cat-label" style={{ color: '#1a202c' }}>Success Together</div>
+                
+                <div style={{ 
+                  flex: '0 0 130px', 
+                  textAlign: 'center',
+                  padding: '20px 15px',
+                  background: '#fdfcf7',
+                  border: '1px solid rgba(212,175,55,0.3)',
+                  borderRadius: '4px'
+                }}>
+                  <div style={{ fontSize: '40px', marginBottom: '12px' }}>🏆</div>
+                  <div style={{ fontSize: '14px', color: '#2d3748', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', lineHeight: '1.5' }}>
+                    SUCCESS<br />TOGETHER
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div className="friend-right">
-              <div className="img-frame" style={{ maxWidth: '440px', borderStyle: 'double', borderColor: 'var(--gold)', transform: 'rotate(2deg)', background: '#fff' }}>
-                <img src="/assets/friendship_collage.png" alt="Friends Collage" style={{ width: '100%', display: 'block' }} />
-              </div>
+            {/* Right Side: Photo Collage */}
+            <div style={{ flex: '0 0 50%', position: 'relative' }}>
+              <div style={{ 
+                position: 'relative',
+                padding: '20px',
+                background: '#fff',
+                border: '3px solid #d4af37',
+                borderRadius: '8px',
+                boxShadow: '0 10px 40px rgba(0,0,0,0.1)'
+              }}>
+                <img 
+                  src="/assets/friendship_collage.png" 
+                  alt="Friendship Collage" 
+                  style={{ 
+                    width: '100%', 
+                    display: 'block',
+                    borderRadius: '4px'
+                  }} 
+                />
+                </div>
             </div>
           </div>
         </div>
@@ -660,46 +764,142 @@ function App() {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-logo">
-              <img src="/assets/logo.png" alt="PK-50 Logo" className="footer-logo-img" />
-              <p style={{ color: 'var(--gold-light)', fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', margin: 0 }}>
+      {/* Footer Section - Professional & Visible */}
+      <footer style={{ 
+        background: '#02050c', 
+        padding: '50px 0 30px 0',
+        borderTop: '1px solid rgba(212, 175, 55, 0.2)',
+        position: 'relative'
+      }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 40px' }}>
+          {/* Top Section with 3 columns */}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1.2fr 1.5fr 1fr',
+            gap: '60px',
+            marginBottom: '35px',
+            alignItems: 'center' 
+          }}>
+            {/* Left: Logo */}
+            <div>
+              <img src="/assets/logo.png" alt="PK-50 Logo" style={{ height: '50px', display: 'block', marginBottom: '12px' }} />
+              <p style={{ 
+                color: 'var(--gold-light)', 
+                fontSize: '11px', 
+                letterSpacing: '2px', 
+                textTransform: 'uppercase',
+                margin: 0,
+                fontWeight: '500'
+              }}>
                 LOADED. TIMELESS. UNSTOPPABLE.
               </p>
             </div>
             
-            <div className="footer-info">
-              <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--text-light)', margin: 0 }}>
+            {/* Center: Event Info */}
+            <div style={{ textAlign: 'center' }}>
+              <p style={{ 
+                fontSize: '13px', 
+                textTransform: 'uppercase', 
+                letterSpacing: '2px', 
+                color: 'var(--text-light)',
+                margin: '0 0 12px 0',
+                fontWeight: '600'
+              }}>
                 FOLLOW, TEXAS ★ APRIL 3, 2027 ★ DALLAS, TEXAS
               </p>
-              <p className="serif-title" style={{ fontSize: '16px', color: 'var(--gold)', margin: '5px 0 0 0' }}>
+              <p className="serif-title" style={{ 
+                fontSize: '18px', 
+                color: 'var(--gold)', 
+                margin: '0',
+                fontStyle: 'italic'
+              }}>
                 Let's make unforgettable memories together!
               </p>
             </div>
             
-            <div className="footer-social">
-              <p style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--text-muted)', margin: '0 0 10px 0' }}>
+            {/* Right: Social Links */}
+            <div>
+              <p style={{ 
+                fontSize: '11px', 
+                textTransform: 'uppercase', 
+                letterSpacing: '2px', 
+                color: 'var(--text-muted)',
+                margin: '0 0 15px 0',
+                textAlign: 'right',
+                fontWeight: '600'
+              }}>
                 Follow The Journey
               </p>
-              <div className="social-links">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Instagram">
+              <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-end' }}>
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Instagram" style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  border: '1px solid var(--gold-dark)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--gold-light)',
+                  textDecoration: 'none',
+                  fontSize: '18px',
+                  transition: 'all 0.3s',
+                  background: 'rgba(212, 175, 55, 0.05)'
+                }}>
                   📸
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Facebook">
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Facebook" style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  border: '1px solid var(--gold-dark)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--gold-light)',
+                  textDecoration: 'none',
+                  fontSize: '18px',
+                  transition: 'all 0.3s',
+                  background: 'rgba(212, 175, 55, 0.05)'
+                }}>
                   👤
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="YouTube">
+                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="YouTube" style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  border: '1px solid var(--gold-dark)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--gold-light)',
+                  textDecoration: 'none',
+                  fontSize: '18px',
+                  transition: 'all 0.3s',
+                  background: 'rgba(212, 175, 55, 0.05)'
+                }}>
                   📺
                 </a>
               </div>
             </div>
-            
-            <div className="footer-copyright">
+          </div>
+          
+          {/* Divider */}
+          <div style={{ 
+            height: '1px',
+            background: 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent)',
+            margin: '25px 0'
+          }}></div>
+          
+          {/* Copyright */}
+          <div style={{ textAlign: 'center' }}>
+            <p style={{ 
+              color: 'rgba(255, 255, 255, 0.4)', 
+              fontSize: '12px',
+              margin: 0,
+              letterSpacing: '0.5px'
+            }}>
               © 2027 PK-50 Celebration. All Rights Reserved. Designed with luxury and passion.
-            </div>
+            </p>
           </div>
         </div>
       </footer>
