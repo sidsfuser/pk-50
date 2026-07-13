@@ -1284,7 +1284,7 @@ textarea.form-input-overlay {
     display: flex !important;
   }
 
-  .header.menu-open::before {
+  .nav-container.menu-open::before {
     content: '';
     position: fixed;
     top: 60px;
@@ -1295,6 +1295,7 @@ textarea.form-input-overlay {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 998;
+    pointer-events: none;
   }
 }
 

@@ -61,8 +61,8 @@ function App() {
   return (
     <>
       {/* Navigation Header */}
-      <header className={`header ${mobileMenuOpen ? 'menu-open' : ''}`}>
-        <div className="nav-container">
+      <header className="header">
+        <div className={`nav-container ${mobileMenuOpen ? 'menu-open' : ''}`}>
           <div className="logo-container" onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
             <img src="/assets/logo.png" alt="PK-50 Logo" className="logo-img" />
           </div>
@@ -135,15 +135,15 @@ function App() {
           {/* Mobile Menu Overlay */}
           {mobileMenuOpen && (
             <div
+              className="mobile-menu-overlay"
               style={{
                 position: 'fixed',
                 top: '60px',
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'rgba(3, 8, 18, 0.98)',
-                backdropFilter: 'blur(10px)',
-                zIndex: 999,
+                background: 'rgba(3, 8, 18, 0.95)',
+                zIndex: 998,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
