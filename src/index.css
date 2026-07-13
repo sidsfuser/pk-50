@@ -1258,9 +1258,18 @@ textarea.form-input-overlay {
 
 /* Mobile Navigation - Hamburger Menu */
 @media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
   .nav-container {
     padding: 0 15px;
     height: 60px;
+    position: relative;
   }
 
   .logo-img {
@@ -1274,11 +1283,28 @@ textarea.form-input-overlay {
   .hamburger-menu {
     display: flex !important;
   }
+
+  .header.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 8, 18, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 998;
+  }
 }
 
 /* Hamburger Menu Button */
 .hamburger-menu {
   display: none;
+}
+
+.hamburger-menu span {
+  display: block;
 }
 
 /* Footer Responsive */
@@ -1419,7 +1445,7 @@ textarea.form-input-overlay {
   }
 
   .rsvp-left {
-    padding: 25px 15px !important;
+    padding: 73px 15px !important;
     min-height: auto !important;
   }
 

@@ -61,7 +61,7 @@ function App() {
   return (
     <>
       {/* Navigation Header */}
-      <header className="header">
+      <header className={`header ${mobileMenuOpen ? 'menu-open' : ''}`}>
         <div className="nav-container">
           <div className="logo-container" onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
             <img src="/assets/logo.png" alt="PK-50 Logo" className="logo-img" />
@@ -96,7 +96,7 @@ function App() {
               border: 'none',
               cursor: 'pointer',
               padding: 0,
-              zIndex: 1001,
+              zIndex: 1002,
             }}
             aria-label="Toggle menu"
           >
