@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { submitRSVP, sendRSVPEmail } from './services/emailService';
+import { submitRSVP } from './services/emailService';
 
 // Car labels for the single cars.png image
 const CAR_LABELS = ['CLASSIC MUSCLE', 'FERRARI 488', 'ROLLS-ROYCE CULLINAN', 'LAMBORGHINI HURACÁN', 'MUSTANG GT'];

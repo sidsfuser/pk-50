@@ -36,6 +36,8 @@ npm install @emailjs/browser
 
 **Subject:** Thank You for RSVP - PK-50 Celebration
 
+**To Email (CRITICAL):** `{{to_email}}`
+
 **Content:**
 ```
 <div style="font-family: system-ui, sans-serif, Arial; font-size: 16px; background-color: #fff8f1">
@@ -91,9 +93,18 @@ npm install @emailjs/browser
 </div>
 ```
 
+**⚠️ IMPORTANT: Configure the To Email Field**
+
+In EmailJS, when creating/editing your template, you MUST set the **To Email** field:
+
+1. In the template editor, look for **"To email"** or **"Recipient"** field (right sidebar)
+2. Enter: `{{to_email}}`
+3. This tells EmailJS to send the email to the address provided in the RSVP form
+4. Without this, you'll get error: "The recipients address is empty"
+
 4. Save the template and note down your **Template ID** (e.g., `template_xyz789`)
 
-### Step 5: Get Your Public Key
+### Step 5: Get Your Public Keyk
 
 1. Go to **Account** → **API Keys**
 2. Copy your **Public Key** (e.g., `abc123def456`)
