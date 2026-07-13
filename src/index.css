@@ -1081,4 +1081,22 @@ textarea.form-input-overlay {
   }
 }
 
+/* Entrepreneurship layout sub-row responsiveness */
+.ent-sub-row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .ent-sub-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ent-sub-row > div {
+    flex: 0 0 100% !important;
+    width: 100%;
+  }
+}
+
 

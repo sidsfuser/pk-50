@@ -295,86 +295,107 @@ function App() {
       </section>
 
       {/* Entrepreneurship Section */}
-      <section id="entrepreneurship" className="section" style={{ background: '#FAF8F5', padding: '80px 0' }}>
+      <section id="entrepreneurship" className="section" style={{ background: '#eee5db', padding: '80px 0' }}>
         <div className="container">
-          {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <span className="section-tag" style={{ color: 'var(--accent-red)', fontSize: '12px', letterSpacing: '3px', display: 'block', marginBottom: '15px' }}>
-              VISION & LEADERSHIP
-            </span>
-            <h2 className="section-heading" style={{ fontSize: '42px', color: '#1a202c', fontFamily: 'Outfit, sans-serif', fontWeight: 700, margin: 0 }}>
-              Entrepreneurship
-            </h2>
-          </div>
-          
-          {/* Content Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '70px', marginBottom: '60px' }}>
-            {/* Left column - first 3 items */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
-                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
-                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
-                  Founder & CEO of Exterprise Solutions - an award-winning enterprise technology firm helping businesses innovate, transform and grow.
-                </p>
-              </div>
+          <div className="ent-wrapper" style={{
+            display: 'flex',
+            background: '#fdfcf7',
+            border: '1px solid rgba(212, 175, 55, 0.3)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+            borderRadius: '8px',
+            overflow: 'hidden'
+          }}>
+            {/* Left side text and details */}
+            <div className="ent-left" style={{ flex: '0 0 55%', padding: '40px', background: '#fdfcf7' }}>
+              <span className="section-tag" style={{ color: 'var(--accent-red)', fontSize: '11px', letterSpacing: '2px', display: 'block', marginBottom: '8px', textAlign: 'left' }}>VISION & LEADERSHIP</span>
+              <h2 className="section-heading" style={{ fontSize: '32px', color: '#0f2942', fontFamily: 'Outfit, sans-serif', fontWeight: '800', marginTop: '5px', marginBottom: '15px', textTransform: 'uppercase', textAlign: 'left' }}>Entrepreneurship</h2>
               
-              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
-                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
-                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
-                  Specializing in Digital Transformation, AI, Data & Analytics, Cloud, and Enterprise Solutions.
-                </p>
-              </div>
+              <div style={{ color: 'var(--accent-red)', margin: '5px 0 20px 0', borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: '10px', textAlign: 'left' }}>★</div>
               
-              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
-                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
-                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
-                  Trusted by global clients to deliver scalable, future-ready solutions.
-                </p>
-              </div>
-            </div>
-            
-            {/* Right column - next 3 items */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
-                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
-                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
-                  Presence across 3 Continents - North America, Asia, and Australia.
-                </p>
-              </div>
-              
-              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
-                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
-                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
-                  Supporting communities and people through mentorship, employment, and philanthropy.
-                </p>
-              </div>
-              
-              <div style={{ display: 'flex', gap: '25px', alignItems: 'flex-start' }}>
-                <span style={{ color: 'var(--accent-red)', fontSize: '20px', lineHeight: '1', flexShrink: 0 }}>★</span>
-                <p style={{ color: '#1a202c', fontSize: '13px', lineHeight: '1.7', margin: 0, opacity: 0.9 }}>
-                  Believing in giving back and creating opportunities for all.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Map and Office Row */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
-            {/* Left: Map */}
-            <div>
-              <p style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '3px', color: '#1a202c', fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontFamily: 'Montserrat, sans-serif' }}>
-                PRESENCE ACROSS 3 CONTINENTS
+              <p style={{ color: '#0f2942', fontSize: '16px', fontWeight: '700', lineHeight: '1.6', marginBottom: '25px', textAlign: 'left', fontFamily: 'Outfit, sans-serif' }}>
+                Founder & CEO of Exterprise Solutions – an award-winning enterprise technology firm helping businesses innovate, transform and grow.
               </p>
-              <div style={{ position: 'relative' }}>
-                <img src="/assets/presence_map.png" alt="Exterprise Global Presence Map" style={{ width: '100%', display: 'block' }} />
+              
+              {/* Bullets & Map sub-row */}
+              <div className="ent-sub-row" style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', textAlign: 'left' }}>
+                {/* Bullets */}
+                <div style={{ flex: '0 0 55%' }}>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                      Specializing in Digital Transformation, AI, Data & Analytics, Cloud, and Enterprise Solutions.
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                      Trusted by global clients to deliver scalable, future-ready solutions.
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                      Presence across 3 Continents – North America, Asia, and Australia.
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                      Supporting communities and people through mentorship, employment, and philanthropy.
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'flex-start', fontSize: '13px', lineHeight: '1.5', color: '#4a5568', fontWeight: '600' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '16px', height: '16px', borderRadius: '50%', border: '1.5px solid #d4af37', color: '#d4af37', fontSize: '9px', marginRight: '12px', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                      Believing in giving back and creating opportunities for all.
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Map illustration */}
+                <div style={{ flex: '0 0 45%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingLeft: '10px', borderLeft: '1px solid rgba(0,0,0,0.05)' }}>
+                  <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', color: '#0f2942', fontWeight: 'bold', marginBottom: '4px' }}>Presence Across</span>
+                  <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '3px', color: '#c41e3a', fontWeight: '800', marginBottom: '10px' }}>3 Continents</span>
+                  <img src="/assets/presence_map.png" alt="Exterprise Global Presence Map" style={{ width: '100%', maxWidth: '240px', display: 'block', opacity: '0.85' }} />
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', fontSize: '8px', textTransform: 'uppercase', letterSpacing: '1px', color: '#666', fontWeight: 'bold', marginTop: '10px' }}>
+                    <span>North America</span>
+                    <span style={{ color: '#d4af37' }}>|</span>
+                    <span>Asia</span>
+                    <span style={{ color: '#d4af37' }}>|</span>
+                    <span>Australia</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Stats Box at the bottom */}
+              <div className="ent-stats-box" style={{ 
+                border: '1.5px solid rgba(212, 175, 55, 0.4)', 
+                borderRadius: '8px', 
+                background: '#fdfcf7', 
+                padding: '20px', 
+                marginTop: '35px',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(5, 1fr)',
+                gap: '10px'
+              }}>
+                <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
+                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>25+</h4>
+                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Years of Leadership</p>
+                </div>
+                <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
+                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>500+</h4>
+                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Successful Projects</p>
+                </div>
+                <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
+                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>100+</h4>
+                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Happy Clients</p>
+                </div>
+                <div style={{ textAlign: 'center', borderRight: '1px solid rgba(212,175,55,0.2)' }}>
+                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>3</h4>
+                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Continents Presence</p>
+                </div>
+                <div style={{ textAlign: 'center' }}>
+                  <h4 style={{ fontSize: '26px', color: '#0f2942', fontWeight: '800', margin: '0', fontFamily: 'Outfit, sans-serif' }}>1</h4>
+                  <p style={{ fontSize: '8px', textTransform: 'uppercase', color: '#666', letterSpacing: '1px', fontWeight: 'bold', margin: '5px 0 0 0' }}>Mission: People First</p>
+                </div>
               </div>
             </div>
             
-            {/* Right: Office Image */}
-            <div>
-              <div className="img-frame" style={{ borderWidth: '4px', borderColor: 'var(--gold)', boxShadow: '0 12px 36px rgba(0,0,0,0.15)', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
-                <img src="/assets/entrepreneurship_office.png" alt="Office Workspace" style={{ width: '100%', display: 'block' }} />
-              </div>
+            {/* Right side single office workspace skyline image */}
+            <div className="ent-right" style={{ flex: '0 0 45%', minHeight: '450px' }}>
+              <img src="/assets/entrepreneurship_office.png" alt="Office Workspace" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
         </div>
